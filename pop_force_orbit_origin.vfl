@@ -1,0 +1,9 @@
+// Use in a POP force 
+// Orbit the Origin
+// length(force) ensures the parameter
+// still has an effect on the scale of
+// the orbit
+vector axis = { 0, 1, 0 };
+vector center = { 0, 0, 0 };
+force = length(force) * cross(@P-center, axis);
+force = force + set(0, 1, 0);
